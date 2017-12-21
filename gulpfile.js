@@ -7,50 +7,29 @@ var gulpUtil = require('gulp-util');
 var glob = require('glob');
 var fs = require('fs');
 var debug = require('gulp-debug');
+var yaml = require('yamljs');
 
-////////////////////////////////////
-// CUSTOMIZE THESE VARIABLES
-////////////////////////////////////
+config = yaml.load('config.yml');
 
 /*
  * The path to your Sugar directory where you are testing and developing your module loadable package.
- * The path should end with a directory name (no slash).
- *
- * If all of your custom code will be in the custom directory, we recommend using your Sugar custom directory
- * Example: '/Applications/MAMP/htdocs/sugar/custom'
- *
- * If all of your custom code will NOT be in the custom directory (for example, if you built a module loadable package
- * using Studio so you have code in custom, icons, language, metadata, and modules directories), we recommend using
- * your Sugar directory.
- * Example: '/Applications/MAMP/htdocs/sugar/custom'
  */
-var pathToSugarDirectory = '';
+var pathToSugarDirectory = config.pathToSugarDirectory;
+var sugarCustomDirectoryGlob = pathToSugarDirectory + '/**/*';
 
 /*
- * The path to your code repository.  Files inside of your Sugar custom directory will be automatically synced
- * to this directory.
- * Example: /Users/lschaefer/samplecoderepo/src/custom
+ * The path to your code repository.  Files inside of your Sugar directory will be automatically synced to this directory.
  */
-var pathToCodeRepoDirectory = '';
+var pathToCodeRepoDirectory = config.pathToCodeRepoDirectory;
 
 /*
- * This is an array of globs that SHOULD be synced. Any files that do not match the patterns below will not be synced.
- * You likely do NOT want to sync your entire Sugar custom directory as the basic Sugar installation includes hundreds of
- * files by default in the custom directory.  It's best to specifically list the directories and/or files that should be
- * included.
- *
- * See the readme for examples
+ * Array of globs that SHOULD be synced
  */
-var arrayOfGlobsToSync = [];
-
-////////////////////////////////////
-// END OF REQUIRED CUSTOMIZATIONS
-////////////////////////////////////
+var arrayOfGlobsToSync = config.listOfGlobsToSync;
 
 var nameOfUnsyncedFilesTextFile = 'unsyncedfiles.txt';
 var writeStream = fs.createWriteStream(nameOfUnsyncedFilesTextFile);
 
-var sugarCustomDirectoryGlob = pathToSugarDirectory + '/**/*';
 
 /**
  * The default task does the following:
