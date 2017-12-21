@@ -12,8 +12,11 @@ This script allows a Sugar developer to develop code customizations in his Sugar
 the file changes back to his Git code repository.
 
 ## Prerequisites 
+ * Install Yarn, an NPM compatible package manager. See 
+ [Yarn Installation Guide](https://yarnpkg.com/lang/en/docs/install/) for more details on how to install Yarn.
  * Install gulp using the Gulp Getting Started guide: https://github.com/gulpjs/gulp/blob/master/docs/getting-started.md
- * Install the required modules using `npm install`
+ * Install the JavaScript dependencies by navigating in a shell to the directory containing gulpfile.js and 
+ executing `yarn install`
  * Configure config.yml
  
 ## Usage
