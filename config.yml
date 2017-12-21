@@ -8,12 +8,12 @@
 # using Studio so you have code in custom, icons, language, metadata, and modules directories), we recommend using
 # your Sugar directory.
 # Example: /Applications/MAMP/htdocs/sugar/custom
-pathToSugarDirectory: /Users/lschaefer/samplecustomdir
+pathToSugarDirectory:
 
 
 # The path to your code repository.  Files inside of your Sugar directory will be automatically synced to this directory.
 # Example /Users/lschaefer/samplecoderepo/src/custom
-pathToCodeRepoDirectory: /Users/lschaefer/samplecoderepo
+pathToCodeRepoDirectory:
 
 
 # This is an whitelist of globs that SHOULD be synced. Any files that do not match the patterns below will not be synced.
@@ -29,79 +29,78 @@ pathToCodeRepoDirectory: /Users/lschaefer/samplecoderepo
 #
 # Example of arrayOfGlobsToSync for the ProfessorM module where all customizations are NOT in the custom directory:
 # listOfGlobsToSync:
-#     - /Applications/MAMP/htdocs/sugar/custom/Extension/modules/**/*professor*.php',
-#     - /Applications/MAMP/htdocs/sugar/custom/Extension/modules/**/*Professor*.php',
-#     - /Applications/MAMP/htdocs/sugar/custom/Extension/modules/Accounts/Ext/Vardefs/**/*',
-#     - /Applications/MAMP/htdocs/sugar/custom/Extension/modules/Accounts/Ext/clients/base/layouts/subpanels/_overridesubpanel-for-accounts-opportunities.php',
-#     - /Applications/MAMP/htdocs/sugar/custom/Extension/modules/Calls/Ext/clients/base/layouts/subpanels/_overridesubpanel-for-calls-opportunities.php',
-#     - /Applications/MAMP/htdocs/sugar/custom/Extension/modules/Calls/Ext/Vardefs/rli_link_workflow.php',
-#     - /Applications/MAMP/htdocs/sugar/custom/Extension/modules/Campaigns/Ext/Layoutdefs/_overrideCampaign_subpanel_opportunities.php',
-#     - /Applications/MAMP/htdocs/sugar/custom/Extension/modules/Contacts/Ext/clients/base/layouts/subpanels/_overridesubpanel-for-contacts-opportunities.php',
-#     - /Applications/MAMP/htdocs/sugar/custom/Extension/modules/Contacts/Ext/Vardefs/**/*',
-#     - /Applications/MAMP/htdocs/sugar/custom/Extension/modules/Documents/Ext/Layoutdefs/_overrideDocument_subpanel_opportunities.php',
-#     - /Applications/MAMP/htdocs/sugar/custom/Extension/modules/Documents/Ext/Vardefs/rli_link_workflow.php',
-#     - /Applications/MAMP/htdocs/sugar/custom/Extension/modules/Leads/Ext/Vardefs/**/*',
-#     - /Applications/MAMP/htdocs/sugar/custom/Extension/modules/Meetings/Ext/Vardefs/**/*',
-#     - /Applications/MAMP/htdocs/sugar/custom/Extension/modules/Notes/Ext/clients/base/layouts/subpanels/_overridesubpanel-for-notes-opportunities.php',
-#     - /Applications/MAMP/htdocs/sugar/custom/Extension/modules/Notes/Ext/Vardefs/**/*',
-#     - /Applications/MAMP/htdocs/sugar/custom/Extension/modules/Opportunities/Ext/Dependencies/opp_disable_dep.ext.php',
-#     - /Applications/MAMP/htdocs/sugar/custom/Extension/modules/Opportunities/Ext/Vardefs/**/*',
-#     - /Applications/MAMP/htdocs/sugar/custom/Extension/modules/Products/Ext/clients/base/layouts/subpanels/_overridesubpanel-for-products-opportunities.php',
-#     - /Applications/MAMP/htdocs/sugar/custom/Extension/modules/Products/Ext/Vardefs/**/*',
-#     - /Applications/MAMP/htdocs/sugar/custom/Extension/modules/Project/Ext/Layoutdefs/_overrideProject_subpanel_opportunities.php',
-#     - /Applications/MAMP/htdocs/sugar/custom/Extension/modules/Project/Ext/Vardefs/**/*',
-#     - /Applications/MAMP/htdocs/sugar/custom/Extension/modules/Quotes/Ext/clients/base/layouts/subpanels/_overridesubpanel-for-quotes-opportunities.php',
-#     - /Applications/MAMP/htdocs/sugar/custom/Extension/modules/Quotes/Ext/Vardefs/**/*',
-#     - /Applications/MAMP/htdocs/sugar/custom/Extension/modules/RevenueLineItems/Ext/clients/base/layouts/subpanels/_overridesubpanel-for-revenuelineitems-opportunities.php',
-#     - /Applications/MAMP/htdocs/sugar/custom/Extension/modules/RevenueLineItems/Ext/Vardefs/**/*',
-#     - /Applications/MAMP/htdocs/sugar/custom/Extension/modules/Tasks/Ext/clients/base/layouts/subpanels/_overridesubpanel-for-tasks-opportunities.php',
-#     - /Applications/MAMP/htdocs/sugar/custom/Extension/modules/Tasks/Ext/Vardefs/**/*',
-#     - /Applications/MAMP/htdocs/sugar/icons/**/*Professor*.*',
-#     - /Applications/MAMP/htdocs/sugar/language/application/en_us.lang.php',
-#     - /Applications/MAMP/htdocs/sugar/metadata/**/*professor*.php',
-#     - /Applications/MAMP/htdocs/sugar/modules/Accounts/clients/base/filters/default/default.php',
-#     - /Applications/MAMP/htdocs/sugar/modules/Accounts/clients/base/views/list/list.php',
-#     - /Applications/MAMP/htdocs/sugar/modules/Accounts/clients/base/views/record/record.php',
-#     - /Applications/MAMP/htdocs/sugar/modules/Accounts/metadata/SearchFields.php',
-#     - /Applications/MAMP/htdocs/sugar/modules/Contacts/clients/base/filters/default/default.php',
-#     - /Applications/MAMP/htdocs/sugar/modules/Contacts/clients/base/views/list/list.php',
-#     - /Applications/MAMP/htdocs/sugar/modules/Contacts/clients/base/views/record/record.php',
-#     - /Applications/MAMP/htdocs/sugar/modules/Contacts/metadata/SearchFields.php',
-#     - /Applications/MAMP/htdocs/sugar/modules/Leads/clients/base/filters/default/default.php',
-#     - /Applications/MAMP/htdocs/sugar/modules/Leads/clients/base/layouts/convert-main/convert-main.php',
-#     - /Applications/MAMP/htdocs/sugar/modules/Leads/clients/base/views/list/list.php',
-#     - /Applications/MAMP/htdocs/sugar/modules/Leads/clients/base/views/record/record.php',
-#     - /Applications/MAMP/htdocs/sugar/modules/Leads/metadata/SearchFields.php',
-#     - /Applications/MAMP/htdocs/sugar/modules/Opportunities/clients/base/filters/default/default.php',
-#     - /Applications/MAMP/htdocs/sugar/modules/Opportunities/clients/base/views/dupecheck-list/dupecheck-list.php',
-#     - /Applications/MAMP/htdocs/sugar/modules/Opportunities/clients/base/views/list/list.php',
-#     - /Applications/MAMP/htdocs/sugar/modules/Opportunities/clients/base/views/record/record.php',
-#     - /Applications/MAMP/htdocs/sugar/modules/Opportunities/clients/base/views/selection-list/selection-list.php',
-#     - /Applications/MAMP/htdocs/sugar/modules/Opportunities/clients/base/views/subpanel-for-accounts-opportunities/subpanel-for-accounts-opportunities.php',
-#     - /Applications/MAMP/htdocs/sugar/modules/Opportunities/clients/base/views/subpanel-for-activities-opportunities/subpanel-for-activities-opportunities.php',
-#     - /Applications/MAMP/htdocs/sugar/modules/Opportunities/clients/base/views/subpanel-for-calls-opportunities/subpanel-for-calls-opportunities.php',
-#     - /Applications/MAMP/htdocs/sugar/modules/Opportunities/clients/base/views/subpanel-for-contacts-opportunities/subpanel-for-contacts-opportunities.php',
-#     - /Applications/MAMP/htdocs/sugar/modules/Opportunities/clients/base/views/subpanel-for-forecastworksheets-opportunity/subpanel-for-forecastworksheets-opportunity.php',
-#     - /Applications/MAMP/htdocs/sugar/modules/Opportunities/clients/base/views/subpanel-for-leads-opportunity/subpanel-for-leads-opportunity.php',
-#     - /Applications/MAMP/htdocs/sugar/modules/Opportunities/clients/base/views/subpanel-for-meetings-opportunity/subpanel-for-meetings-opportunity.php',
-#     - /Applications/MAMP/htdocs/sugar/modules/Opportunities/clients/base/views/subpanel-for-notes-opportunities/subpanel-for-notes-opportunities.php',
-#     - /Applications/MAMP/htdocs/sugar/modules/Opportunities/clients/base/views/subpanel-for-pmse_bpmprocessdefinition-opportunities_locked_fields_link/subpanel-for-pmse_bpmprocessdefinition-opportunities_locked_fields_link.php',
-#     - /Applications/MAMP/htdocs/sugar/modules/Opportunities/clients/base/views/subpanel-for-products-opportunities/subpanel-for-products-opportunities.php',
-#     - /Applications/MAMP/htdocs/sugar/modules/Opportunities/clients/base/views/subpanel-for-quotes-opportunities/subpanel-for-quotes-opportunities.php',
-#     - /Applications/MAMP/htdocs/sugar/modules/Opportunities/clients/base/views/subpanel-for-revenuelineitems-opportunities/subpanel-for-revenuelineitems-opportunities.php',
-#     - /Applications/MAMP/htdocs/sugar/modules/Opportunities/clients/base/views/subpanel-for-tags-opportunities_link/subpanel-for-tags-opportunities_link.php',
-#     - /Applications/MAMP/htdocs/sugar/modules/Opportunities/clients/base/views/subpanel-for-tasks-opportunities/subpanel-for-tasks-opportunities.php',
-#     - /Applications/MAMP/htdocs/sugar/modules/Opportunities/clients/mobile/views/detail/detail.php',
-#     - /Applications/MAMP/htdocs/sugar/modules/Opportunities/clients/mobile/views/edit/edit.php',
-#     - /Applications/MAMP/htdocs/sugar/modules/Opportunities/clients/mobile/views/list/list.php',
-#     - /Applications/MAMP/htdocs/sugar/modules/Opportunities/metadata/subpanels/Campaign_subpanel_opportunities.php',
-#     - /Applications/MAMP/htdocs/sugar/modules/Opportunities/metadata/subpanels/Document_subpanel_opportunities.php',
-#     - /Applications/MAMP/htdocs/sugar/modules/Opportunities/metadata/subpanels/Email_subpanel_opportunities.php',
-#     - /Applications/MAMP/htdocs/sugar/modules/Opportunities/metadata/subpanels/Project_subpanel_opportunities.php',
-#     - /Applications/MAMP/htdocs/sugar/modules/Opportunities/metadata/SearchFields.php',
-#     - /Applications/MAMP/htdocs/sugar/modules/PR_Professors/**/*',
-#     - /Applications/MAMP/htdocs/sugar/modules/Products/metadata/SearchFields.php',
-#     - /Applications/MAMP/htdocs/sugar/modules/RevenueLineItems/metadata/studio.php'
+#     - /Applications/MAMP/htdocs/sugar/custom/Extension/modules/**/*professor*.php
+#     - /Applications/MAMP/htdocs/sugar/custom/Extension/modules/**/*Professor*.php
+#     - /Applications/MAMP/htdocs/sugar/custom/Extension/modules/Accounts/Ext/Vardefs/**/*
+#     - /Applications/MAMP/htdocs/sugar/custom/Extension/modules/Accounts/Ext/clients/base/layouts/subpanels/_overridesubpanel-for-accounts-opportunities.php
+#     - /Applications/MAMP/htdocs/sugar/custom/Extension/modules/Calls/Ext/clients/base/layouts/subpanels/_overridesubpanel-for-calls-opportunities.php
+#     - /Applications/MAMP/htdocs/sugar/custom/Extension/modules/Calls/Ext/Vardefs/rli_link_workflow.php
+#     - /Applications/MAMP/htdocs/sugar/custom/Extension/modules/Campaigns/Ext/Layoutdefs/_overrideCampaign_subpanel_opportunities.php
+#     - /Applications/MAMP/htdocs/sugar/custom/Extension/modules/Contacts/Ext/clients/base/layouts/subpanels/_overridesubpanel-for-contacts-opportunities.php
+#     - /Applications/MAMP/htdocs/sugar/custom/Extension/modules/Contacts/Ext/Vardefs/**/*
+#     - /Applications/MAMP/htdocs/sugar/custom/Extension/modules/Documents/Ext/Layoutdefs/_overrideDocument_subpanel_opportunities.php
+#     - /Applications/MAMP/htdocs/sugar/custom/Extension/modules/Documents/Ext/Vardefs/rli_link_workflow.php
+#     - /Applications/MAMP/htdocs/sugar/custom/Extension/modules/Leads/Ext/Vardefs/**/*
+#     - /Applications/MAMP/htdocs/sugar/custom/Extension/modules/Meetings/Ext/Vardefs/**/*
+#     - /Applications/MAMP/htdocs/sugar/custom/Extension/modules/Notes/Ext/clients/base/layouts/subpanels/_overridesubpanel-for-notes-opportunities.php
+#     - /Applications/MAMP/htdocs/sugar/custom/Extension/modules/Notes/Ext/Vardefs/**/*
+#     - /Applications/MAMP/htdocs/sugar/custom/Extension/modules/Opportunities/Ext/Dependencies/opp_disable_dep.ext.php
+#     - /Applications/MAMP/htdocs/sugar/custom/Extension/modules/Opportunities/Ext/Vardefs/**/*
+#     - /Applications/MAMP/htdocs/sugar/custom/Extension/modules/Products/Ext/clients/base/layouts/subpanels/_overridesubpanel-for-products-opportunities.php
+#     - /Applications/MAMP/htdocs/sugar/custom/Extension/modules/Products/Ext/Vardefs/**/*
+#     - /Applications/MAMP/htdocs/sugar/custom/Extension/modules/Project/Ext/Layoutdefs/_overrideProject_subpanel_opportunities.php
+#     - /Applications/MAMP/htdocs/sugar/custom/Extension/modules/Project/Ext/Vardefs/**/*
+#     - /Applications/MAMP/htdocs/sugar/custom/Extension/modules/Quotes/Ext/clients/base/layouts/subpanels/_overridesubpanel-for-quotes-opportunities.php
+#     - /Applications/MAMP/htdocs/sugar/custom/Extension/modules/Quotes/Ext/Vardefs/**/*
+#     - /Applications/MAMP/htdocs/sugar/custom/Extension/modules/RevenueLineItems/Ext/clients/base/layouts/subpanels/_overridesubpanel-for-revenuelineitems-opportunities.php
+#     - /Applications/MAMP/htdocs/sugar/custom/Extension/modules/RevenueLineItems/Ext/Vardefs/**/*
+#     - /Applications/MAMP/htdocs/sugar/custom/Extension/modules/Tasks/Ext/clients/base/layouts/subpanels/_overridesubpanel-for-tasks-opportunities.php
+#     - /Applications/MAMP/htdocs/sugar/custom/Extension/modules/Tasks/Ext/Vardefs/**/*
+#     - /Applications/MAMP/htdocs/sugar/icons/**/*Professor*.*
+#     - /Applications/MAMP/htdocs/sugar/language/application/en_us.lang.php
+#     - /Applications/MAMP/htdocs/sugar/metadata/**/*professor*.php
+#     - /Applications/MAMP/htdocs/sugar/modules/Accounts/clients/base/filters/default/default.php
+#     - /Applications/MAMP/htdocs/sugar/modules/Accounts/clients/base/views/list/list.php
+#     - /Applications/MAMP/htdocs/sugar/modules/Accounts/clients/base/views/record/record.php
+#     - /Applications/MAMP/htdocs/sugar/modules/Accounts/metadata/SearchFields.php
+#     - /Applications/MAMP/htdocs/sugar/modules/Contacts/clients/base/filters/default/default.php
+#     - /Applications/MAMP/htdocs/sugar/modules/Contacts/clients/base/views/list/list.php
+#     - /Applications/MAMP/htdocs/sugar/modules/Contacts/clients/base/views/record/record.php
+#     - /Applications/MAMP/htdocs/sugar/modules/Contacts/metadata/SearchFields.php
+#     - /Applications/MAMP/htdocs/sugar/modules/Leads/clients/base/filters/default/default.php
+#     - /Applications/MAMP/htdocs/sugar/modules/Leads/clients/base/layouts/convert-main/convert-main.php
+#     - /Applications/MAMP/htdocs/sugar/modules/Leads/clients/base/views/list/list.php
+#     - /Applications/MAMP/htdocs/sugar/modules/Leads/clients/base/views/record/record.php
+#     - /Applications/MAMP/htdocs/sugar/modules/Leads/metadata/SearchFields.php
+#     - /Applications/MAMP/htdocs/sugar/modules/Opportunities/clients/base/filters/default/default.php
+#     - /Applications/MAMP/htdocs/sugar/modules/Opportunities/clients/base/views/dupecheck-list/dupecheck-list.php
+#     - /Applications/MAMP/htdocs/sugar/modules/Opportunities/clients/base/views/list/list.php
+#     - /Applications/MAMP/htdocs/sugar/modules/Opportunities/clients/base/views/record/record.php
+#     - /Applications/MAMP/htdocs/sugar/modules/Opportunities/clients/base/views/selection-list/selection-list.php
+#     - /Applications/MAMP/htdocs/sugar/modules/Opportunities/clients/base/views/subpanel-for-accounts-opportunities/subpanel-for-accounts-opportunities.php
+#     - /Applications/MAMP/htdocs/sugar/modules/Opportunities/clients/base/views/subpanel-for-activities-opportunities/subpanel-for-activities-opportunities.php
+#     - /Applications/MAMP/htdocs/sugar/modules/Opportunities/clients/base/views/subpanel-for-calls-opportunities/subpanel-for-calls-opportunities.php
+#     - /Applications/MAMP/htdocs/sugar/modules/Opportunities/clients/base/views/subpanel-for-contacts-opportunities/subpanel-for-contacts-opportunities.php
+#     - /Applications/MAMP/htdocs/sugar/modules/Opportunities/clients/base/views/subpanel-for-forecastworksheets-opportunity/subpanel-for-forecastworksheets-opportunity.php
+#     - /Applications/MAMP/htdocs/sugar/modules/Opportunities/clients/base/views/subpanel-for-leads-opportunity/subpanel-for-leads-opportunity.php
+#     - /Applications/MAMP/htdocs/sugar/modules/Opportunities/clients/base/views/subpanel-for-meetings-opportunity/subpanel-for-meetings-opportunity.php
+#     - /Applications/MAMP/htdocs/sugar/modules/Opportunities/clients/base/views/subpanel-for-notes-opportunities/subpanel-for-notes-opportunities.php
+#     - /Applications/MAMP/htdocs/sugar/modules/Opportunities/clients/base/views/subpanel-for-pmse_bpmprocessdefinition-opportunities_locked_fields_link/subpanel-for-pmse_bpmprocessdefinition-opportunities_locked_fields_link.php
+#     - /Applications/MAMP/htdocs/sugar/modules/Opportunities/clients/base/views/subpanel-for-products-opportunities/subpanel-for-products-opportunities.php
+#     - /Applications/MAMP/htdocs/sugar/modules/Opportunities/clients/base/views/subpanel-for-quotes-opportunities/subpanel-for-quotes-opportunities.php
+#     - /Applications/MAMP/htdocs/sugar/modules/Opportunities/clients/base/views/subpanel-for-revenuelineitems-opportunities/subpanel-for-revenuelineitems-opportunities.php
+#     - /Applications/MAMP/htdocs/sugar/modules/Opportunities/clients/base/views/subpanel-for-tags-opportunities_link/subpanel-for-tags-opportunities_link.php
+#     - /Applications/MAMP/htdocs/sugar/modules/Opportunities/clients/base/views/subpanel-for-tasks-opportunities/subpanel-for-tasks-opportunities.php
+#     - /Applications/MAMP/htdocs/sugar/modules/Opportunities/clients/mobile/views/detail/detail.php
+#     - /Applications/MAMP/htdocs/sugar/modules/Opportunities/clients/mobile/views/edit/edit.php
+#     - /Applications/MAMP/htdocs/sugar/modules/Opportunities/clients/mobile/views/list/list.php
+#     - /Applications/MAMP/htdocs/sugar/modules/Opportunities/metadata/subpanels/Campaign_subpanel_opportunities.php
+#     - /Applications/MAMP/htdocs/sugar/modules/Opportunities/metadata/subpanels/Document_subpanel_opportunities.php
+#     - /Applications/MAMP/htdocs/sugar/modules/Opportunities/metadata/subpanels/Email_subpanel_opportunities.php
+#     - /Applications/MAMP/htdocs/sugar/modules/Opportunities/metadata/subpanels/Project_subpanel_opportunities.php
+#     - /Applications/MAMP/htdocs/sugar/modules/Opportunities/metadata/SearchFields.php
+#     - /Applications/MAMP/htdocs/sugar/modules/PR_Professors/**/*
+#     - /Applications/MAMP/htdocs/sugar/modules/Products/metadata/SearchFields.php
+#     - /Applications/MAMP/htdocs/sugar/modules/RevenueLineItems/metadata/studio.php
 listOfGlobsToSync:
-    - /Users/lschaefer/samplecustomdir/yes/**/*
-    - /Users/lschaefer/samplecustomdir/*one*
+    -
